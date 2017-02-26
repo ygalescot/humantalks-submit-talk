@@ -1,0 +1,14 @@
+
+.navbar-humantalks {
+  border-top: 4px solid #790257;
+}
+
+.navbar-humantalks .container {
+  border-bottom: 1px solid rgba(195,195,195,0.27);
+  padding-bottom: 30px;
+}
+
+.page-header {
+  text-align: center;
+  border: none;
+}
