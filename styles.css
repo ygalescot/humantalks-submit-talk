@@ -1,5 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif, helvetica, arial, sans-serif;
+  line-height: 1.875;
 }
 p {
   margin-top: 0;
@@ -11,19 +12,12 @@ a {
 }
 
 .navbar-humantalks {
-  border-top: 4px solid #790257;
+  border-top: 5px solid #790257;
 }
 
 .navbar-humantalks .container {
   border-bottom: 1px solid rgba(195,195,195,0.27);
   padding-bottom: 30px;
-}
-.navbar-humantalks .navbar-nav .nav-link {
-  font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
-  font-size: .8125em;
-  text-transform: uppercase;
-  color: #262626;
 }
 
 .page-header {
@@ -31,11 +25,11 @@ a {
   text-align: center;
   border: none;
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .talk-form {
-  margin-top: 2.5rem;
+  margin: 2.5em 0;
 }
 
 .btn-primary {
