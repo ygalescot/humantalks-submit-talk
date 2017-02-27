@@ -10,8 +10,19 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
     <!-- Custom Styles -->
+    <!--link href="fonts.css" rel="stylesheet" /-->
     <link href="styles.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="https://use.typekit.net/kwe7mwg.js"></script>
+    <script>
+        try{Typekit.load({ async: true });}catch(e){}
+    </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,129 +62,101 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-offset-2 col-md-10">
-                    Les HumanTalks sont un événement pour les développeurs de tous horizons.<br>
-                    Tous les 2ème mardis du mois, on vous présente 4 talks de 10 minutes sur des sujets liés de près et parfois de loin au métier de développeur.<br>
-                    Les HumanTalks se veulent avant tout un événement convivial et permettant à tout le monde (y compris aux débutants) de venir présenter un sujet qui leur tient à coeur.<br>
-                    Pour toute question, n'hésitez pas à nous contacter : <a href="https://twitter.com/HumanTalksParis" target="_blank">@@HumanTalksParis</a> - <a href="https://www.meetup.com/fr-FR/HumanTalks-Paris/" target="_blank">Meetup</a> - <a href="mailto:paris@@humantalks.com" target="_blank">paris@@humantalks.com</a><br>
-                    <br>
+                <div class="col-md-offset-1 col-md-10">
+                    <p>
+                        Les HumanTalks sont un événement pour les développeurs de tous horizons.
+                        Tous les 2ème mardis du mois, on vous présente 4 talks de 10 minutes sur des sujets liés de près et parfois de loin au métier de développeur.<br>
+                        Les HumanTalks se veulent avant tout un événement convivial et permettant à tout le monde (y compris aux débutants) de venir présenter un sujet qui leur tient à coeur.<br>
+                        Pour toute question, n'hésitez pas à nous contacter : 
+                        <a href="https://twitter.com/HumanTalksParis" target="_blank">@HumanTalksParis</a> - 
+                        <a href="https://www.meetup.com/fr-FR/HumanTalks-Paris/" target="_blank">Meetup</a> - 
+                        <a href="mailto:paris@humantalks.com" target="_blank">paris@humantalks.com</a>
+                    </p>
                 </div>
-
-                <form action="/submit-talk" method="POST" class="form-horizontal talk-form">
-    
-                    <div class="form-group  ">
-                        <label for="title" class="control-label col-md-2">Titre</label>
-                        <div class="col-md-10">
-                            <input
-                                class="form-control "
-                                type="text"
-                                id="title"
-                                name="title"
-                                value=""
-                                placeholder="ex: Ionic2, les développeurs web à l'assaut du mobile" autofocus=""
-                                required> 
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="description" class="control-label col-md-2">Description</label>
-                        <div class="col-md-10">
-                            <textarea
-                                class="form-control "
-                                id="description"
-                                name="description"
-                                rows="5" placeholder="ex: Ionic c'est génial !"
-                                >
-                            </textarea>  
-                        </div>
-                    </div>
-
-                    <div class="form-group  ">
-                        <label for="speakers" class="control-label col-md-2">Speakers</label>
-                        <div class="col-md-10">
-                            
-
-                        <select
-                            class="form-control select2-multi "
-                            id="speakers"
-                            name="speakers[]"
-                            value=""
-                            multiple="multiple"
-                            placeholder="Sélectionner les speakers" onCreate="createPersonModal" onCreateLabel="Nouveau speaker"
-                            
-                            size="1">
-                        </select>
-
-                        </div>
-</div>
-
-<div class="form-group  ">
-    <label for="slides" class="control-label col-md-2">Slides</label>
-    <div class="col-md-10">
-         
-<div class="input-embed">
-    
-<input
-    class="form-control "
-    type="text"
-    id="slides"
-    name="slides"
-    value=""
-    placeholder="ex: http://www.slideshare.net/inarocket/learn-bem-css-naming-convention"
-    >
-    <div class="preview" style="display: none;"></div>
-</div> 
-        
-
-        
-    </div>
-</div>
-
-<div class="form-group  ">
-    <label for="proposal_availabilities" class="control-label col-md-2">Disponibilités</label>
-    <div class="col-md-10">
-         
-<select
-    class="form-control "
-    id="proposal_availabilities"
-    name="proposal.availabilities[]"
-    multiple="multiple"
-    size="7"
-    >
-    
-    
-        
-            <option value="14/03/2017" >14 March 2017</option>
-        
-            <option value="11/04/2017" >11 April 2017</option>
-        
-            <option value="16/05/2017" >16 May 2017</option>
-        
-            <option value="13/06/2017" >13 June 2017</option>
-        
-            <option value="11/07/2017" >11 July 2017</option>
-        
-            <option value="15/08/2017" >15 August 2017</option>
-        
-            <option value="12/09/2017" >12 September 2017</option>
-        
-    
-</select> 
-        
-
-        
-    </div>
-</div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <button type="submit" class="btn btn-primary btn-lg">Proposer ce talk aux HumanTalks Paris</button>
-                        </div>
-                    </div>
-                
-</form>
-
             </div>
-        </div>
+        </div>   
+
+        <form action="/submit-talk" method="POST" class="form-horizontal talk-form">
+            <div class="form-group  ">
+                <label for="title" class="control-label col-md-2">Titre</label>
+                <div class="col-md-10">
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="title"
+                        name="title"
+                        value=""
+                        placeholder="ex: Ionic2, les développeurs web à l'assaut du mobile" autofocus=""
+                        required> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="control-label col-md-2">Description</label>
+                <div class="col-md-10">
+                    <textarea
+                        class="form-control"
+                        id="description"
+                        name="description"
+                        rows="5" placeholder="ex: Ionic c'est génial !"
+                        ></textarea>  
+                </div>
+            </div>
+
+            <div class="form-group  ">
+                <label for="speakers" class="control-label col-md-2">Speakers</label>
+                <div class="col-md-10">
+                <select
+                    class="form-control select2-multi"
+                    id="speakers"
+                    name="speakers[]"
+                    value=""
+                    multiple="multiple"
+                    placeholder="Sélectionner les speakers" onCreate="createPersonModal" onCreateLabel="Nouveau speaker"
+                    size="1">
+                    <option></option>
+                </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="slides" class="control-label col-md-2">Slides</label>
+                <div class="col-md-10">
+                    <div class="input-embed">
+                    <input
+                        class="form-control "
+                        type="text"
+                        id="slides"
+                        name="slides"
+                        value=""
+                        placeholder="ex: http://www.slideshare.net/inarocket/learn-bem-css-naming-convention"
+                        >
+                        <div class="preview" style="display: none;"></div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="proposal_availabilities" class="control-label col-md-2">Disponibilités</label>
+                <div class="col-md-10">
+                    <select class="form-control " id="proposal_availabilities" name="proposal.availabilities[]" multiple="multiple" size="7">
+                        <option value="14/03/2017" >14 March 2017</option>
+                        <option value="11/04/2017" >11 April 2017</option> 
+                        <option value="16/05/2017" >16 May 2017</option>
+                        <option value="13/06/2017" >13 June 2017</option>
+                        <option value="11/07/2017" >11 July 2017</option>
+                        <option value="15/08/2017" >15 August 2017</option>
+                        <option value="12/09/2017" >12 September 2017</option>                        
+                    </select> 
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-primary btn-lg">Proposer ce talk aux HumanTalks Paris</button>
+                </div>
+            </div>   
+        </form>
+
     </div>
 
     
